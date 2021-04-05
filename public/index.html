@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -24,12 +22,126 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
+  <title>React App</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: roboto;
+      box-sizing: content-box;
+    }
+
+    html {
+      font-size: 62.5%;
+    }
+
+    body {
+      background: #2a2d34;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      font-size: 3rem;
+    }
+
+    .triviaTitle {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px white solid;
+      height: 140px;
+      align-items: flex-end;
+    }
+
+    .wrapper {
+      width: 750px;
+      margin-top: 10%;
+    }
+
+    .answer {
+      display: flex;
+      background: whitesmoke;
+      border-radius: 100px;
+      padding: 10px;
+      color: #333;
+      margin: 10px 0;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+      align-items: center;
+    }
+
+    .answer:hover {
+      background: #eaeaeb;
+    }
+
+    .answer p:first-child {
+      background: #30c5ff;
+      color: white;
+      border-radius: 100%;
+      height: 39px;
+      width: 39px;
+      font-weight: bolder;
+      margin-right: 30px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+      flex-shrink: 0;
+    }
+
+    .answer p:last-child {
+      font-size: 2rem;
+    }
+
+    button {
+      border-radius: 100px;
+      height: 60px;
+      width: 60px;
+      background: #5c946e;
+      border-style: none;
+      color: white;
+      font-size: 4rem;
+      margin: 30px 10px 0px 10px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    }
+
+    .btn-ans {
+      width: 200px;
+    }
+
+    button:hover {
+      background: #568a67;
+      cursor: pointer;
+    }
+
+    button:focus {
+      outline: none;
+    }
+
+    button:active {
+      transform: translateY(2px);
+    }
+
+    .buttons {
+      position: absolute;
+      bottom: 50px;
+      text-align: center;
+      width: 750px;
+    }
+
+    .title {
+      font-size: 5rem;
+      align-self: flex-start;
+    }
+
+    .correctAns,
+    .correctAns:hover {
+      background-color: #fff0bb;
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/9806a60018.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -39,5 +151,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+</body>
+
 </html>
